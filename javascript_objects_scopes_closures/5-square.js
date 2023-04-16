@@ -1,23 +1,42 @@
 #!/usr/bin/node
-// define a class square
+// define a class Rectangle
 
-class Square {
-  constructor (w) {
-    // initialize square
-    if (w <= 0 || !Number.isInteger(w)) {
+class Rectangle {
+  constructor (w, h) {
+    // initialize the rectangle
+    if (w <= 0 || h <= 0 || !Number.isInteger(w) || !Number.isInteger(h)) {
       return;
     }
     this.width = w;
+    this.height = h;
   }
 
   print () {
-    // print square
-    console.log('X'.repeat(this.width).repeat(this.width).match(new RegExp('.{1,' + this.width + '}', 'g')).join('\n'));
+    // console.log('X'.repeat(this.width).repeat(this.height));
+    // print the rectangle
+    console.log('X'.repeat(this.width).repeat(this.height).match(new RegExp('.{1,' + this.width + '}', 'g')).join('\n'));
+  }
+
+  rotate () {
+    // rotate the value of the rectangle
+    const width = this.width;
+    this.width = this.height;
+    this.height = width;
   }
 
   double () {
-    // duplicate area of square
+    // duplicate the value of the rectangle
     this.width = this.width * 2;
+    this.height = this.height * 2;
+  }
+}
+
+// define a class square
+
+class Square extends Rectangle {
+  constructor (size) {
+    // initialize square
+    super(size, size);
   }
 }
 module.exports = Square;

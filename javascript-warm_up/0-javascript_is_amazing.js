@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/Node
 // define a variable and print
 const myVar = 'JavaScript is amazing';
 console.log(myVar);

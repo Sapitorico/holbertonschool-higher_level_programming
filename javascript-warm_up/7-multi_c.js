@@ -1,4 +1,4 @@
-/usr/bin/node
+#!/usr/bin/node
 // print x times a messages
 const x = parseInt(process.argv[2]);
 for (let i = 0; i < x; i++)

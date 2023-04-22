@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // print factorial  of numbedr
-const factorial = number => {
-  if (number >= 1) { return factorial(number - 1) * number; }
+function factorial (n) {
+  if (n >= 1) { return factorial(n - 1) * n; }
   return (1);
-};
+}
 console.log(factorial(parseInt(process.argv[2])));

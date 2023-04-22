@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// print factorial  of number
+// print factorial  of numbedr
 const factorial = number => {
   if (number >= 1) { return factorial(number - 1) * number; }
   return (1);

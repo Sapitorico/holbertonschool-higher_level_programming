@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//s
+// s
 const request = require('request');
 const route = process.argv[2];
 request(route, function (error, response, body) {

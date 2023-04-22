@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//s
+// s
 const fs = require('fs');
 const file = process.argv[2];
 const args = process.argv[3];
